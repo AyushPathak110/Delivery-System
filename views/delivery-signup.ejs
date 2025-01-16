@@ -1,0 +1,64 @@
+<% layout("boilerplate") -%>
+<% if (error && error.length) { %>
+    <div class="alert alert-success alert-dismissible show" role="alert"
+        style="display: flex; justify-content: space-between;">
+        <%= error %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+<div class="box"> 
+    <form action="/user/delivery-signup" method="post" novalidate class="needs-validation">
+        <div class="mb-2 element">    
+            <label class="form-label" for="Username">Enter your Username:</label>
+            <input required class="form-control" type="text" name="username">
+            <div class="invalid-feedback">Enter the username</div>
+        </div>
+        <div class="mb-2 element">    
+            <label class="form-label" for="password">Enter the password:</label>
+            <input class="form-control" type="password" name="password" required>
+            <div class="invalid-feedback">Enter the password</div>
+        </div>
+        <div class="mb-2 row">
+            <div class="col-4">
+                <label for="name" class="form-label">Name: </label>
+                <input required type="text" name="name" class="form-control">
+                <div class="invalid-feedback">Enter the first name</div>
+            </div>
+            <div class="col-4">    
+                <label for="email" required class="form-label">email: </label>
+                <input type="email" name="email" class="form-control">
+            </div>
+            <div class="col-4">    
+                <label for="phone" required class="form-label">Phone Number: </label>
+                <input type="number" name="phone" class="form-control">
+            </div>
+        </div>
+        <div class="mb-2 element">    
+            <label class="form-label" for="verificationDocuments">Aadhar card number:</label>
+            <input class="form-control" type="number" name="verificationDocuments" required>
+            <div class="invalid-feedback">Enter the number properly</div>
+        </div>
+        <input style="border: none; background-color: rgb(100, 100, 255); color: white; padding: 8px; border-radius: 5px;" type="submit" value="submit">
+    </form>
+</div>
+
+<script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()</script>

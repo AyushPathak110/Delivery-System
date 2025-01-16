@@ -1,0 +1,45 @@
+<nav>
+    <ul class="flex-navi">
+        <a href="/" style="text-decoration: none;">
+            <div class="flex-nav-right title">
+                <li><img class="logo" src="/icons/logo.svg" alt="logo"></li>
+                <li class="li-name">Delivery System</li>
+            </div>
+        </a>
+        <div class="flex-nav-right">
+            <li class="li-it"><a class="anchor" href="/">Home</a></li>
+            <% if(currUser && currUser.verified && currUser.constructor.modelName == "agent") {%>
+            <li class="li-it"><a class="anchor" href="/book/view/requests">Order Requests</a></li>
+            <% } %>
+            <% if(currUser && currUser.verified && currUser.constructor.modelName == "agent") {%>
+            <li class="li-it"><a class="anchor" href="/book/view/done">Confirmed Orders</a></li>
+            <% } %>
+            <% if(currUser && currUser.verified && currUser.constructor.modelName == "agent") {%>
+            <li class="li-it"><a class="anchor" href="/new">Add a Shop</a></li>
+            <% } %>
+            <% if(currUser && currUser.username == "admin") {%>
+            <li class="li-it"><a class="anchor" href="/verify">Manage Shopowners</a></li>
+            <% } %>
+            <% if(currUser && currUser.username == "admin") {%>
+            <li class="li-it"><a class="anchor" href="/rider/verify">Manage Riders</a></li>
+            <% } %>
+            <% if(currUser && currUser.constructor.modelName == "User" && currUser.username != "admin") {%>
+            <li class="li-it"><a class="anchor" href="/user/orders">Your Orders</a></li>
+            <% } %>
+            <% if(currUser && currUser.constructor.modelName == "delivery") {%>
+            <li class="li-it"><a class="anchor" href="/rider/orders">Available Orders</a></li>
+            <% } %>
+            <% if(currUser && currUser.constructor.modelName == "delivery") {%>
+            <li class="li-it"><a class="anchor" href="/rider/your-orders">Your Orders</a></li>
+            <% } %>
+            <%if(!currUser){%>
+                <li class="li-it"><a class="anchor" href="/agent-login">Owner Login</a></li>
+                <li class="li-it"><a class="anchor" href="/user/delivery-login">Delivery Login</a></li>
+                <li class="li-it spe"><a class="anchor" href="/user-login">User Login</a></li>
+                <%}%>
+                <%if(currUser){%>
+                <li class="li-it spe"><a class="anchor" href="/user-login/logout">Logout</a></li>
+                <% } %>
+        </div>
+    </ul>
+</nav>

@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Shree Kirana Store",
+    "contact": {
+      "phone": "9876543210",
+      "email": "shreekiranastore@example.com"
+    },
+    "address": "15, Dharavi Road, 400017", 
+    "area": "Dharavi", 
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "items": [
+      { "name": "Tata Rice", "price": "₹40" }, 
+      { "name": "Fortune Atta", "price": "₹60" }, 
+      { "name": "MDH Garam Masala", "price": "₹30" }, 
+      { "name": "Fresh Tomatoes", "price": "₹20" }, 
+      { "name": "Amul Butter", "price": "₹70" }, 
+      { "name": "Pillsbury Chakki Fresh Atta", "price": "₹65" }, 
+      { "name": "Madhuri Salt", "price": "₹10" }, 
+      { "name": "Tata Tea Gold", "price": "₹150" }, 
+      { "name": "Britannia Good Day", "price": "₹35" }
+    ],
+    "owner": "63f4f8b3d158092c6e3e0a67",
+    "openingHours": "7 AM - 10 PM",
+    "image": "https://thumbs.dreamstime.com/b/grocery-shop-cartoon-greengrocer-store-facade-front-view-isolated-one-story-building-awning-signboard-place-sale-small-210597654.jpg",
+    "review": []
+  },
+  {
+    "name": "Annapurna Grocery",
+    "contact": {
+      "phone": "8765432109",
+      "email": "annapurnagrocery@example.com"
+    },
+    "address": "35, Jadavpur Road, 700032", 
+    "area": "Jadavpur",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "items": [
+      { "name": "Lalitha Pulses", "price": "₹80" }, 
+      { "name": "Haldiram's Bhujia", "price": "₹50" }, 
+      { "name": "Shan Biryani Masala", "price": "₹25" }, 
+      { "name": "Coca-Cola", "price": "₹45" }, 
+      { "name": "Lays Chips", "price": "₹35" }, 
+      { "name": "Maggi Instant Noodles", "price": "₹10" }, 
+      { "name": "Kellogg's Cornflakes", "price": "₹150" }, 
+      { "name": "Tata Salt", "price": "₹12" }, 
+      { "name": "Patanjali Aloe Vera Juice", "price": "₹120" }
+    ],
+    "owner": "63f4f8b3d158092c6e3e0a68",
+    "openingHours": "8 AM - 9 PM",
+    "image": "https://thumbs.dreamstime.com/b/grocery-shop-cartoon-greengrocer-store-facade-front-view-isolated-one-story-building-awning-signboard-place-sale-small-210597654.jpg",
+    "review": []
+  },
+  {
+    "name": "Srinivasa Mart",
+    "contact": {
+      "phone": "5551234567",
+      "email": "srinivasamart@example.com"
+    },
+    "address": "220, MG Road, 500003",  
+    "area": "MG Road",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "items": [
+      { "name": "Kellogg's Cornflakes", "price": "₹150" }, 
+      { "name": "Del Monte Olive Oil", "price": "₹300" }, 
+      { "name": "Fresh Mangoes", "price": "₹50" }, 
+      { "name": "Tata Tea Gold", "price": "₹160" }, 
+      { "name": "Saffola Refined Oil", "price": "₹180" }, 
+      { "name": "Tata Salt", "price": "₹12" }, 
+      { "name": "Haldiram's Kachori", "price": "₹40" }, 
+      { "name": "Amul Cheese", "price": "₹100" }, 
+      { "name": "Pillsbury Cake Mix", "price": "₹80" },
+      { "name": "Britannia Biscuit", "price": "₹25" }
+    ],
+    "owner": "63f4f8b3d158092c6e3e0a69",
+    "openingHours": "9 AM - 11 PM",
+    "image": "https://thumbs.dreamstime.com/b/grocery-shop-cartoon-greengrocer-store-facade-front-view-isolated-one-story-building-awning-signboard-place-sale-small-210597654.jpg",
+    "review": []
+  }
+]

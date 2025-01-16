@@ -1,0 +1,39 @@
+<% layout("boilerplate") -%>
+    <div class="row mt-5" style="width: 100%;">
+        <div class="col-6 box" style="margin-left: 100px; padding: 50px;">
+            <h1>Buy your groceries</h1>
+            <form action="/book/<%= id %>" method="post" novalidate class="needs-validation">
+                <fieldset>
+                    <legend>User Information</legend>
+                    <div class="row">
+                        <div class="col-4">
+                            <label class="form-label" for="name">Name:</label>
+                            <input class="form-control" type="text" id="name" name="user[name]" required>
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label" for="email">Email:</label>
+                            <input class="form-control" type="email" id="email" name="user[email]" required>
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label" for="numberOfPeople">Phone Number:</label>
+                            <input class="form-control" type="number" id="numberOfPeople" name="user[phone]" required><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="form-label" for="address">Address:</label>
+                            <textarea class="form-control" name="user[address]" style="resize:none;" rows="3" required></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend></legend>
+                    <label class="form-label" for="startDate">Give your order:</label>
+                    <textarea class="form-control" rows="3" name="order" style="resize:none;" required></textarea><br><br>
+                </fieldset>
+
+                <input type="submit" value="Submit"
+                    style="border: none; background-color: rgb(100, 100, 255); color: white; padding: 8px; border-radius: 5px;">
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,90 @@
+<% layout("boilerplate") -%>
+<% if (error && error.length) { %>
+    <div class="alert alert-success alert-dismissible show" role="alert"
+        style="display: flex; justify-content: space-between;">
+        <%= error %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+<div class="row mt-5" style="width: 100%;">
+    <div class="col-6 ">
+     
+        <form action="/<%= data.id %>?_method=PATCH" method="post" novalidate class="needs-validation">
+            <div class="row">
+                <div class="col-4">
+                    <label for="from" class="form-label">Name: </label>
+                    <input type="text" name="name" required class="form-control" value="<%= data.name %>">
+                </div>
+                <div class="col-4">    
+                    <label for="destination" class="form-label">Phone No.: </label>
+                    <input required type="number" maxlength="10" minlength="10" name="contact[phone]" class="form-control" value="<%= data.contact.phone %>">
+                </div>
+                <div class="col-4">    
+                    <label for="price" class="form-label">E-Mail: </label>
+                    <input required type="email" name="contact[email]" class="form-control" value="<%= data.contact.email %>">
+                </div>
+            </div>
+            <div class="mb-2 element">    
+                <label class="form-label" for="description">Enter the address:</label>
+                <textarea required name="address" class="form-control" rows="2" style="resize: none;"><%= data.address %></textarea>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="inclusions" class="form-label">Area: </label>
+                    <input type="text" name="area" required class="form-control" value="<%= data.area %>">
+                </div>
+                <div class="col-4">
+                    <label for="exclusions" class="form-label">City: </label>
+                    <input type="text" name="city" required class="form-control" value="<%= data.city %>">
+                </div>
+                <div class="col-4">
+                    <label for="exclusions" class="form-label">State: </label>
+                    <input type="text" name="state" required class="form-control" value="<%= data.state %>">
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <label for="duration" class="form-label">Items at your shop with price: </label>
+                <textarea name="items" class="form-control" style="resize: none;" required rows="6" id="" placeholder="Item_name_1:price_1Item_name_2:price_2..."><% data.items.forEach(item => { %>
+<%= item.name %>:<%= item.price %>,<% }) %></textarea>
+            </div>
+            <div class="row">
+                <div class="col-6 mt-2">
+                    <label class="form-label" for="open">Current status of your shop:</label>
+                    <select name="open" class="form-control">
+                        <option value="true" selected>Open</option>
+                        <option value="false">Close</option>
+                    </select>
+                </div>
+            <div class="col-6 mt-2">
+                <label for="image" class="form-label">You can give the image link here: </label>
+                <input type="url" name="image" value="<%= data.image %>" class="form-control">
+            </div>
+            </div>
+            <div class="col-12 mt-2">
+                <label class="form-label" for="notice">Enter the notice here:</label>
+                <textarea name="notice" class="form-control" style="resize: none;" rows="5"></textarea>
+            </div>
+            <input type="submit" value="Submit" style="border: none; background-color: rgb(100, 100, 255); color: white; margin: 15px; padding: 8px; border-radius: 5px;">    
+        </form>
+    </div>
+    </div>
+    <script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+          'use strict'
+        
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.querySelectorAll('.needs-validation')
+        
+          // Loop over them and prevent submission
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+        
+                form.classList.add('was-validated')
+              }, false)
+            })
+        })()</script>

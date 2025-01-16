@@ -1,0 +1,38 @@
+<div class="details">
+    <div class="card mb-4">
+    <div class=" card-header">
+        Notice by owner
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            <% if (data.notice == "") { %>No notice available!<% } else { %> <%= data.notice %><% } %>
+        </p>
+    </div>
+    </div>
+
+    <div class="card mb-4">
+    <div class=" card-header">
+        We sell
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            <ul>
+            <% data.items.forEach(item => { %>
+             <li><%= item.name %> at ₹<%= item.price %></li>
+            <% }) %>
+            </ul>
+        </p>
+    </div>
+    </div>
+
+    <div class="card mb-4">
+    <div class=" card-header">
+        Our Address
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            <%= data.address %>, <%= data.area %>, <%= data.city %>, <%= data.state %>
+        </p>
+    </div>
+    </div>
+</div>
