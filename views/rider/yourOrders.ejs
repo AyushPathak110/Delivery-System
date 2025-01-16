@@ -33,13 +33,20 @@
             <% data.forEach(element=> {%>
                 <div class="listBox">
                     <div>
+                        <b>Customer's name:</b>
                         <%= element.user.name%><br>
-                        <%= element.user.address %><br>
-                        <%= element.order %><br>
-                        <%= element.sname.name %><br>
-                        <%= element.sname.address %>
-                        <%= element.sname.area %>
-                        <%= element.sname.city %>
+                            <b>
+                                Customer's address:</b> <%= element.user.address %><br>
+                            <b>
+                                Order:</b> <%= element.order %><br>
+                            
+                            <b>
+                                Shop's name:</b> <%= element.sname.name %><br>
+                            
+                            <b>
+                                Shop's address:</b> <%= element.sname.address %>
+                            <%= element.sname.area %>
+                                <%= element.sname.city %>
                     </div>
                     <div>
                         <% if(currUser && currUser.constructor.modelName=="delivery"){ %>

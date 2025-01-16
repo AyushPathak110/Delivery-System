@@ -33,12 +33,12 @@
             <% data.forEach(element=> {%>
                 <div class="listBox">
                     <div>
-                        <%= element.user.name%><br>
-                        <%= element.user.email %><br>
-                        <%= element.user.phone %><br>
-                        <%= element.user.address %><br>
-                        <%= element.order %><br>
-                        <%= element.sname.name %>
+                        <b>Customer's name: </b><%= element.user.name%><br>
+                        <b>Customer's email: </b><%= element.user.email %><br>
+                        <b>Customer's phone number: </b><%= element.user.phone %><br>
+                        <b>Customer's address: </b><%= element.user.address %><br>
+                        <b>Order: </b><%= element.order %><br>
+                        <b>Shop's name: </b><%= element.sname.name %>
                     </div>
                     <div>
                         <% if(currUser && currUser.id==element.shop){ %>

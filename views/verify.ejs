@@ -18,12 +18,12 @@
             <% data.forEach(element=> {%>
                 <div class="listBox">
                     <div>
-                        <%= element.name%><br>
-                        <%= element.IDNumber%><br>
-                        <%= element.email %><br>
-                        <%= element.phone %><br>
-                        <%= element.address %><br>
-                        <%= element.status %>
+                        <b>Owner's name: </b><%= element.name%><br>
+                        <b>Owner's Aadhaar card number: </b><%= element.IDNumber%><br>
+                        <b>Owner's email: </b><%= element.email %><br>
+                        <b>Owner's phone number: </b><%= element.phone %><br>
+                        <b>Owner's address: </b><%= element.address %><br>
+                        <b>Verification status: </b><%= element.status %>
                         <% if(element.verified) {%> Verified <% }else{ %> Not verified <% } %> <br> 
                     </div>
                     <div>

@@ -18,11 +18,11 @@
             <% data.forEach(element=> {%>
                 <div class="listBox">
                     <div>
-                        <%= element.name%><br>
-                        <%= element.verificationDocuments%><br>
-                        <%= element.email %><br>
-                        <%= element.phone %><br>
-                        <% if(element.verified) {%> Verified <% }else{ %> Not verified <% } %> <br> 
+                        <b>Rider's name: </b><%= element.name%><br>
+                        <b>Rider's Aadhaar card number: </b><%= element.verificationDocuments%><br>
+                        <b>Rider's email: </b><%= element.email %><br>
+                        <b>Rider's phone number: </b><%= element.phone %><br>
+                        <b>Rider's status: </b><% if(element.verified) {%> Verified <% }else{ %> Not verified <% } %> <br> 
                     </div>
                     <div>
                         <% if(currUser && currUser.username == "admin"){ %>

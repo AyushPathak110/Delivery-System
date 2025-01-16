@@ -34,20 +34,20 @@
                 <div class="listBox">
                     <div class="dataOfPerson">
                         <h2><%= element.status %></h2>
-                        <%= element.user.name%><br>
-                        <%= element.user.email %><br>
-                        <%= element.user.phone %><br>
-                        <%= element.user.address %><br>
-                        <%= element.order %><br>
-                        <%= element.sname.name %>
+                        <b>Customer's name: </b><%= element.user.name%><br>
+                        <b>Customer's email: </b><%= element.user.email %><br>
+                        <b>Customer's phone number: </b><%= element.user.phone %><br>
+                        <b>Customer's address: </b><%= element.user.address %><br>
+                        <b>Order: </b><%= element.order %><br>
+                        <b>Shop's name: </b><%= element.sname.name %>
 
                         <% if (element.rider != null) { %>
                             <br><br>
                             <h2>Delivery partner details</h2>
                             <div class="dataOfPerson">
-                                <%= element.rider.name%><br>
-                                <%= element.rider.email %><br>
-                                <%= element.rider.phone %>
+                                <b>Rider's name: </b><%= element.rider.name%><br>
+                                <b>Rider's email: </b><%= element.rider.email %><br>
+                                <b>Rider's phone number: </b><%= element.rider.phone %>
                             </div>
                         <% } %>
                     </div>
